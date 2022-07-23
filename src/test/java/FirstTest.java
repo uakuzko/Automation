@@ -35,8 +35,6 @@ public class FirstTest {
         String expectedResult = "Mazafaka";
         Assert.assertEquals(actualResult, expectedResult);
 
-        System.out.println(actualResult + "-" + expectedResult);
-
         driver.quit();
 
     }
