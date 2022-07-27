@@ -40,8 +40,6 @@ public class FirstTest {
         String expectedResult = "Mazafaka";
         Assert.assertEquals(actualResult, expectedResult);
 
-        System.out.println("Vlad handled GIT )");
-
         driver.quit();
 
     }
