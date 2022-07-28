@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
-public class FirstTest {
+public class SecondTest {
 
     WebDriver driver;
 
@@ -25,26 +25,17 @@ public class FirstTest {
 
         driver.get("http://google.com");
 
-        WebElement searchBox = driver.findElement(By.name("q"));
-        searchBox.click();
-        searchBox.sendKeys("Mazafaka");
-
-        WebElement googleLogo = driver.findElement(By.xpath("//img[@alt='Google']"));
-
-        googleLogo.click();
-
-        WebElement pressSearchButton = driver.findElement(By.xpath("//div[@class='FPdoLc lJ9FBc']//input[@name='btnK']"));
-        pressSearchButton.click();
+        driver.findElement(By.name("q")).sendKeys("Hentai");
+        driver.findElement(By.xpath("//img[@class=\"lnXdpd\"]")).click();
+        driver.findElement(By.xpath("//div[@class='FPdoLc lJ9FBc']//input[@name='btnK']")).click();
 
         String actualResult = driver.findElement(By.name("q")).getAttribute("value");
+        String expectedResult = "Hentai";
 
-        String expectedResult = "Mazafaka";
         Assert.assertEquals(actualResult, expectedResult);
 
         driver.quit();
 
     }
-
-
 }
 
